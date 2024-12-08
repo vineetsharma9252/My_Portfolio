@@ -1,0 +1,78 @@
+.timeline-container {
+    width: 90%;
+    margin: 50px auto;
+  }
+  
+  .timeline-line {
+    width: 100%;
+    height: 20px; /* Increased thickness for a modern look */
+    background: linear-gradient(90deg, #014083, #0056b3); /* Gradient color for the line */
+    position: relative;
+    border-radius: 3px;
+  }
+  
+  .timeline-point {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -13.5px; /* Adjust to center the icon over the line */
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 190, 190);
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .timeline-icon {
+    color: #007bff;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-point:hover .timeline-icon {
+    transform: scale(1.3); /* Icon grows slightly on hover */
+  }
+  
+  .timeline-year {
+    position: absolute;
+    top: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-description {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 6;
+  }
+  
+  .timeline-point:hover .timeline-description {
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+  }
+  
