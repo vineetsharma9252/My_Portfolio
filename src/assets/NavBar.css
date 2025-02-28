@@ -1,0 +1,25 @@
+.nav-a {
+    color: black;
+    border-radius: 5px;
+    margin-left: 40px;
+    text-decoration: none;
+    width:inherit;
+    background: linear-gradient( rgb(255, 255, 255),rgb(226, 227, 242));
+    padding: 2px 2px ;
+    font-family:'Times New Roman', Times, serif;
+    transition: transform 0.3s ease, background 0.3s ease; 
+    display: inline-block;
+}
+.nav-a:hover {
+    transform: scale(1.01); 
+    box-shadow: 0.2px 0.6px ;
+} 
+.Link_img{
+    border-radius: 50px;
+}
+.github-img{
+    background: linear-gradient( rgb(255, 255, 255),rgb(226, 227, 242));
+}
+.Link_img:hover{
+    transform: scale(1.1);
+}

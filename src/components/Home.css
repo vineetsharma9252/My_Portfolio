@@ -1,0 +1,24 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure html and body take full height */
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+#container_home{
+    background:url("../assets/Background_2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 20px;
+}
+.card-text:hover{
+    text-decoration: underline;
+}
+.card:hover{
+    box-shadow: 4px 4px rgba(125, 125, 125, 0.834);
+}
+.container_bottom-fluid{
+    border:1px solid black;
+    background-color: rgb(16, 102, 239);
+}

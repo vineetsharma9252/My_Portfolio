@@ -1,0 +1,14 @@
+
+
+.card{
+    border:3px solid rgba(18, 144, 235, 0.841) ; 
+    border-radius: 20px;
+    box-shadow: 1px 3px gray;
+    background-color: rgb(225, 161, 31);
+    padding:30px 20px;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    background-color: rgb(241, 135, 7);
+}
