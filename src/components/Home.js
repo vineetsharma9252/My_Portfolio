@@ -81,12 +81,6 @@ export default function Home() {
                     to help fellow students and aspiring developers grow along
                     the way.
                   </p>
-                  <a href="#" className="card-link">
-                    Portfolio
-                  </a>
-                  <a href="#" className="card-link">
-                    Contact Me
-                  </a>
                 </div>
               </div>
             </div>
