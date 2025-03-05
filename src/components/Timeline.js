@@ -4,11 +4,20 @@ import "./Timeline.css";
 
 const Timeline = () => {
   const events = [
-    { year: "2021", description: "Started my journey as a developer." },
-    { year: "2022", description: "Completed major projects in data science." },
-    { year: "2023", description: "Participated in the Smart India Hackathon." },
-    { year: "2024", description: "Developed a waste management solution." },
-    { year: "2025", description: "lsdbjsvvsiodfidsfdfvgegh" },
+    { year: "2022-Nov", description: "Started my journey as a developer." },
+    {
+      year: "2023-Aug",
+      description: "Created my first OCR based Project(Attedance2Excel).",
+    },
+    {
+      year: "2023-Sep",
+      description: "Participated in the Smart India Hackathon.",
+    },
+    { year: "2024-June", description: "ML intern at Diginique Techlabs." },
+    {
+      year: "2024-Sep",
+      description: "Participated in SIH 2024 and built WasteManagement System",
+    },
   ];
 
   return (
@@ -36,7 +45,8 @@ const Timeline = () => {
             </div>
             <span className="timeline-year">{event.year}</span>
             <div className="timeline-description">
-              {event.description} <a href="#">Watch out The Blog for more </a>
+              {event.description}{" "}
+              <a href="/blog">Watch out The Blog for more </a>
             </div>
           </div>
         ))}

@@ -93,14 +93,10 @@ export default function About() {
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-light">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="/privacy-policy" className="text-light">
-                    Privacy Policy
-                  </a>
+                  <p href="/contact" className="text-light">
+                    <br />
+                    Contact Email - Mastergenos228@gmail.com
+                  </p>
                 </li>
               </ul>
             </div>
@@ -109,19 +105,16 @@ export default function About() {
             <div className="col-md-4 mb-3">
               <h5>Follow Me</h5>
               <a
-                href="https://github.com/your-profile"
+                href="https://github.com/vineetsharma9252"
                 className="text-light me-3"
               >
                 <i className="fab fa-github"></i> GitHub
               </a>
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/vineet-sharma-b6b285201/"
                 className="text-light me-3"
               >
                 <i className="fab fa-linkedin"></i> LinkedIn
-              </a>
-              <a href="https://twitter.com/your-profile" className="text-light">
-                <i className="fab fa-twitter"></i> Twitter
               </a>
             </div>
           </div>

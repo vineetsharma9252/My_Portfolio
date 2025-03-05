@@ -1,5 +1,7 @@
 import React from "react";
 import "./Testimonial.css";
+import shortlisted from "../assets/Screenshot 2025-02-27 081343.png";
+
 export default function Testimonial() {
   const items = {
     1: {
@@ -10,48 +12,16 @@ export default function Testimonial() {
         "Vineet was exceptional in our Machine Learning course. His approach to problem-solving and teamwork was impressive! – Bipul Shahi, Instructor",
     },
     2: {
-      image_link: "",
-      title: "ML Research",
+      image_link: shortlisted,
+      title: "Web D. Internship shortlisted",
       subtitle: "Head",
       description:
-        "Vineet was fantastic to work with! His technical skills and dedication truly set him apart.",
+        "Dear Vineet Sharma , We are pleased to inform you that you have been shortlisted for the Web Development Internship at Edunutshell .Your Qualifications and experiences stood out among many impressive candidates. – Edunutshell Team",
     },
   };
 
   return (
     <div>
-      <div
-        className="card"
-        style={{
-          position: "relative",
-          display: "flex",
-          top: "65px",
-          marginBottom: "20px",
-        }}
-      >
-        <img
-          src="path/to/profile.jpg"
-          className="card-img-top rounded-circle mx-auto"
-          alt="Profile"
-          style={{ width: "100px", height: "100px" }}
-        />
-        <div className="card-body">
-          <h5 className="card-title">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam a
-            earum error.
-          </h5>
-          <h6 className="card-subtitle mb-2 text-muted">Lorem, ipsum.</h6>
-          <p className="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-            facere nobis. Sapiente, iure iusto id animi consectetur libero
-            aspernatur repudiandae, enim possimus dignissimos fuga
-            exercitationem asperiores repellendus ratione! Placeat maiores quo
-            reprehenderit sit voluptatum.
-          </p>
-        </div>
-      </div>{" "}
-      <br />
-      <br />
       <div>
         {Object.values(items).map((item) => (
           <div>
@@ -59,13 +29,15 @@ export default function Testimonial() {
               className="card"
               style={{
                 position: "relative",
-                marginTop: "30px",
+                display: "flex",
+                top: "65px",
+                marginBottom: "20px",
               }}
             >
               <img
                 src={item.image_link}
                 className="card-img-top rounded-circle mx-auto"
-                alt="Profile"
+                alt="..."
                 style={{ width: "100px", height: "100px" }}
               />
               <div className="card-body">

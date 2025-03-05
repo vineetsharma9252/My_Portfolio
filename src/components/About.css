@@ -10,6 +10,16 @@
     box-shadow: 4px 5px;
     font-family: "fantasy",
 } */
-.container-fluid:hover{
+.container-fluid:visited{
     transform: scale(1.005);
+    transition: background-color  9s;
+    transition:color 10s;
+    color:white;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 4px 5px;
 }
+.container-fluid::selection{
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+

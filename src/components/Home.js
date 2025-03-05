@@ -3,7 +3,7 @@ import My_photo from "../assets/My_photo.jpg";
 import Timeline from "./Timeline";
 import Background_img from "../assets/Background_2.png";
 import "./Home.css";
-
+import { projects } from "./contents";
 export default function Home() {
   return (
     <>
@@ -51,14 +51,18 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="col-6">
+            <div className="col-6" style={{ color: "blue" }}>
               <div
                 className="card"
                 style={{
-                  opacity: "90%",
+                  opacity: "100%",
                   height: "100%",
                   width: "100%",
                   marginLeft: "30%",
+                  backgroundColor: "gray",
+                  opacity: "80%",
+                  border: "none",
+                  boxShadow: "revert-layer",
                 }}
               >
                 <div className="card-body">
@@ -67,15 +71,15 @@ export default function Home() {
                     “Explore the world of technology, one card at a time.”
                   </h6>
                   <p className="card-text">
-                    Hello! I'm Vineet Sharma, a tech enthusiast and lifelong
-                    learner with a passion for programming, data science,
-                    machine learning, and software development. Here, I share
-                    insights from my experiences, projects, and studies,
-                    covering everything from coding tutorials to machine
-                    learning applications and software hacks. Whether you’re a
-                    beginner or a seasoned developer, I aim to provide practical
-                    knowledge and fresh perspectives that help you in your tech
-                    journey.
+                    Hello! I'm Vineet Sharma, a tech enthusiast and an eager
+                    learner, currently exploring the world of programming, data
+                    science, and machine learning. As a student, I enjoy working
+                    on projects that apply theoretical concepts to real-world
+                    problems, from coding tutorials to AI-driven applications.
+                    Through this platform, I share insights from my learning
+                    journey, academic experiences, and hands-on projects, hoping
+                    to help fellow students and aspiring developers grow along
+                    the way.
                   </p>
                   <a href="#" className="card-link">
                     Portfolio
@@ -89,57 +93,87 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container my-5" id="education">
-        <h2 className="text-center mb-4">Academic Background</h2>
-        <div className="row">
-          <div className="col-md-6 mb-3">
-            <div className="card border-primary h-100">
-              <div className="card-body">
-                <h5 className="card-title">
-                  Bachelor of Technology in Computer Science
-                </h5>
-                <p className="card-text">
-                  <strong>Institution:</strong> Government Engineering College ,
-                  Ajmer
-                </p>
-                <p className="card-text">
-                  <strong>Year:</strong> 2019 - 2023
-                </p>
-                <p className="card-text">
-                  <strong>Achievements:</strong> Graduated with Honors, Dean’s
-                  List
-                </p>
-                <p className="card-text">
-                  <strong>Key Courses:</strong> Data Structures, Algorithms,
-                  Machine Learning
-                </p>
+      <div
+        style={{
+          backgroundColor: "gray",
+          margin: "10px 10px 10px 10px",
+          borderRadius: "40px",
+          padding: "10px",
+          border: "5px solid black",
+        }}
+      >
+        <div
+          className="container my-5"
+          id="education"
+          style={{ opacity: "110%" }}
+        >
+          <h2 className="text-center mb-4">Academic Background</h2>
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <div className="card border-primary h-100">
+                <div className="card-body">
+                  <h5 className="card-title">
+                    Bachelor of Technology in Computer Science
+                  </h5>
+                  <p className="card-text">
+                    <strong>Institution:</strong> Government Engineering College
+                    , Ajmer
+                  </p>
+                  <p className="card-text">
+                    <strong>Year:</strong> 2022-2026
+                  </p>
+                  <p>
+                    <strong>Current Status</strong>:Ongoing
+                  </p>
+                  <p className="card-text">
+                    <strong>Key Courses:</strong> Web Development , Data Sciences
+                    Machine Learning
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-md-6 mb-3">
-            <div className="card border-primary h-100">
-              <div className="card-body">
-                <h5 className="card-title">Machine Learning Certificate</h5>
-                <p className="card-text">
-                  <strong>Institution:</strong> Diginique
-                </p>
-                <p className="card-text">
-                  <strong>Year:</strong> 2024
-                </p>
-                <p className="card-text">
-                  <strong>Instructor:</strong> Bipul Shahi
-                </p>
-                <p className="card-text">
-                  <strong>Key Topics:</strong> Supervised Learning, Regression,
-                  Neural Networks
-                </p>
+            <div className="col-md-6 mb-3">
+              <div className="card border-primary h-100">
+                <div className="card-body">
+                  <h5 className="card-title">Primary School</h5>
+                  <p className="card-text">
+                    <strong>Institution:</strong> SBPS School
+                  </p>
+                  <p className="card-text">
+                    <strong>Year:</strong> 2020
+                  </p>
+                  <p className="card-text">
+                    <strong>Address:</strong> Subhash Nagar , Ajmer
+                  </p>
+                  <p className="card-text">
+                    <strong>Key Topics:</strong> Mathematics, Science, English
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-3" style={{ marginLeft: "25%" }}>
+              <div className="card border-primary h-100">
+                <div className="card-body">
+                  <h5 className="card-title">Secondary School</h5>
+                  <p className="card-text">
+                    <strong>Institution:</strong> Maharaja School
+                  </p>
+                  <p className="card-text">
+                    <strong>Year:</strong> 2022
+                  </p>
+                  <p className="card-text">
+                    <strong>Address:</strong> Civil Road , Ajmer
+                  </p>
+                  <p className="card-text">
+                    <strong>Key Topics:</strong> Mathematics, Science, English
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div
         className="container text-center"
         style={{ display: "flex", height: "400px", marginTop: "70px" }}
@@ -352,138 +386,83 @@ export default function Home() {
         <div className="container text-center">
           <h1>Projects</h1>
           <div className="row my-3">
-            <div className="col">
-              <div
-                className="card bg-dark text-light"
-                style={{ width: "18rem" }}
-              >
-                <img
-                  src="..."
-                  className="card-img-top"
-                  alt="Waste Management System"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Waste Management System </h5>
-                  <p className="card-text">
-                    <h4>Description</h4>
-                    Waste Management System Web is a comprehensive platform
-                    designed to facilitate efficient waste management and
-                    disposal. It integrates multiple functionalities to improve
-                    sanitation and encourage responsible waste disposal habits.
-                  </p>
-                </div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">Integrated GPT </li>
-                  <li className="list-group-item">Reporting System</li>
-                  <li className="list-group-item">Live waste Analysis</li>
-                </ul>
-                <div className="card-body">
-                  <a href="#" className="card-link">
-                    GitHub
-                  </a>
-                  <a href="#" className="card-link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div
-                className="card bg-dark text-light"
-                style={{ width: "18rem" }}
-              >
-                <img
-                  src="..."
-                  className="card-img-top"
-                  alt="Covid 19 Analysis Dashboard"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Covid 19 Analysis Dashboard</h5>
-                  <p className="card-text">
-                    COVID-19 Dashboard is a data-driven analytical tool designed
-                    to visualize and track the impact of the pandemic across
-                    different regions. It provides insights into the spread of
-                    COVID-19, case trends, and predictive modeling using machine
-                    learning.
-                  </p>
-                </div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">Time series Analysis</li>
-                  <li className="list-group-item">Predictive Modeling</li>
-                  <li className="list-group-item">Data Visualization </li>
-                </ul>
-                <div className="card-body">
-                  <a href="#" className="card-link">
-                    GitHub
-                  </a>
-                  <a href="#" className="card-link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div
-                className="card bg-dark text-light"
-                style={{ width: "18rem" }}
-              >
-                <img
-                  src="..."
-                  className="card-img-top"
-                  alt="Attendance2Excel"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Attendance2Excel </h5>
-                  <p className="card-text">
-                    A solid Django web service that provides College teachers to
-                    put attendance sheet inside it and using pytessaract the
-                    image data have been extracted and put inside any excel
-                    sheet or database . and reduces the manual work .
-                  </p>
-                </div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">Django</li>
-                  <li className="list-group-item">Pytessaract , OCR </li>
-                  <li className="list-group-item">python excel libraries</li>
-                </ul>
-                <div className="card-body">
-                  <a href="#" className="card-link">
-                    GitHub
-                  </a>
-                  <a href="#" className="card-link">
-                    Live Demo
-                  </a>
+            {Object.values(projects).map((item, key) => (
+              <div className="col my-3" key={key}>
+                <div
+                  className="card bg-dark text-light"
+                  style={{
+                    width: "18rem",
+                    height: "100%", // Ensures all cards take equal height
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <img
+                    src={item.image_link}
+                    className="card-img-top"
+                    alt="Waste Management System"
+                    style={{
+                      objectFit: "cover",
+                      height: "200px", // Ensures all images are of equal size
+                    }}
+                  />
+                  <div
+                    className="card-body"
+                    style={{
+                      flexGrow: 1, // Makes body expand and balance space
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <h5 className="card-title">{item.project_name} </h5>
+                    <div className="card-text" style={{ flexGrow: 1 }}>
+                      <h4>Description</h4>
+                      <p>{item.project_desc}</p>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      borderRadius: "15px",
+                      backgroundColor: "white",
+                      overflow: "hidden",
+                      border: "3.4px solid pink",
+                    }}
+                  >
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">{item.specs[1]} </li>
+                      <li className="list-group-item">{item.specs[2]}</li>
+                      <li className="list-group-item">{item.specs[3]}</li>
+                    </ul>
+                  </div>
+                  <div className="card-body">
+                    <a href={item.link} className="card-link">
+                      <button
+                        style={{
+                          borderRadius: "12px",
+                          backgroundColor: "black",
+                          color: "white",
+                          fontFamily: "sans-serif",
+                        }}
+                      >
+                        GitHub{" "}
+                      </button>
+                    </a>
+                    <a href="#" className="card-link">
+                      <button
+                        style={{
+                          borderRadius: "12px",
+                          backgroundColor: "black",
+                          color: "white",
+                          fontFamily: "sans-serif",
+                        }}
+                      >
+                        Live Demo{" "}
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col my-3">
-              <div
-                className="card bg-dark text-light"
-                style={{ width: "18rem" }}
-              >
-                <img src="..." className="card-img-top" alt="Project 4" />
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">An item</li>
-                  <li className="list-group-item">A second item</li>
-                  <li className="list-group-item">A third item</li>
-                </ul>
-                <div className="card-body">
-                  <a href="#" className="card-link">
-                    GitHub
-                  </a>
-                  <a href="#" className="card-link">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -541,45 +520,6 @@ export default function Home() {
               <p>Email - mastergenos228@gmail.com</p>
               <p>Phone Number - +916378761180</p>
               <p>Address - Subhash Nagar , Ajmer </p>
-            </div>
-            <div
-              className="col"
-              style={{
-                background: "orange",
-                height: "300px",
-                overflow: "auto",
-                width: "100%",
-                opacity: "90%",
-                borderRadius: "20px",
-                zIndex: "2",
-              }}
-            >
-              <div className="container text-center">
-                <div className="row row-cols-2">
-                  <div className="col my-3">Column</div>
-                  <div className="col my-3">Column</div>
-                  <div className="col my-3">Column</div>
-                  <div className="col my-3">Column</div>
-                </div>
-              </div>
-              <div className="mb-3 mx-1">
-                <label
-                  htmlFor="exampleFormControlTextarea1"
-                  className="form-label"
-                  style={{
-                    display: "flex",
-                    left: "10px",
-                    fontFamily: "serif",
-                  }}
-                >
-                  Message
-                </label>
-                <textarea
-                  className="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
-              </div>
             </div>
           </div>
         </div>
