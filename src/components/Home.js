@@ -81,12 +81,6 @@ export default function Home() {
                     to help fellow students and aspiring developers grow along
                     the way.
                   </p>
-                  <a href="#" className="card-link">
-                    Portfolio
-                  </a>
-                  <a href="#" className="card-link">
-                    Contact Me
-                  </a>
                 </div>
               </div>
             </div>
@@ -126,8 +120,8 @@ export default function Home() {
                     <strong>Current Status</strong>:Ongoing
                   </p>
                   <p className="card-text">
-                    <strong>Key Courses:</strong> Web Development , Data Sciences
-                    Machine Learning
+                    <strong>Key Courses:</strong> Web Development , Data
+                    Sciences Machine Learning
                   </p>
                 </div>
               </div>
