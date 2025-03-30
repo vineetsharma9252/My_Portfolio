@@ -580,19 +580,6 @@ export default function Home() {
         style={{ background: "#f8f9fa" }}
       >
         <div className="container">
-          <h2
-            className="text-center mb-5"
-            style={{
-              fontSize: "2.5rem",
-              fontWeight: "700",
-              background: "linear-gradient(90deg, #4f46e5, #10b981)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              letterSpacing: "-0.5px",
-            }}
-          >
-            Featured Projects
-          </h2>
 
           <div
             id="projectCarousel"
@@ -615,6 +602,7 @@ export default function Home() {
             </div> */}
 
             {/* Carousel Items */}
+            {/* Projects Section */}
             {/* Projects Section */}
             <div
               id="projects"
@@ -639,7 +627,7 @@ export default function Home() {
                 <div
                   id="projectCarousel"
                   className="carousel slide"
-                  data-bs-ride="carousel"
+                  data-bs-ride="false"
                 >
                   {/* Indicators */}
                   <div className="carousel-indicators">
@@ -669,57 +657,59 @@ export default function Home() {
                         }`}
                       >
                         <div className="row g-0">
-                          <div className="col-md-6">
+                          {/* Image Column - Full width on mobile, half on desktop */}
+                          <div className="col-12 col-md-6">
                             <img
                               src={item.image_link}
                               className="d-block w-100"
                               alt={item.project_name}
                               style={{
-                                height: "400px",
+                                height: "300px",
                                 objectFit: "cover",
                                 borderTopLeftRadius: "16px",
-                                borderBottomLeftRadius: "16px",
+                                borderTopRightRadius: "16px",
+                                borderBottomLeftRadius: "0",
+                                borderBottomRightRadius: "0",
                               }}
                             />
                           </div>
+
+                          {/* Content Column - Full width on mobile, half on desktop */}
                           <div
-                            className="col-md-6 d-flex align-items-center"
+                            className="col-12 col-md-6 d-flex align-items-center bg-white"
                             style={{
-                              background: "white",
-                              padding: "2rem",
-                              borderTopRightRadius: "16px",
+                              padding: "1.5rem",
+                              borderBottomLeftRadius: "16px",
                               borderBottomRightRadius: "16px",
                             }}
                           >
-                            <div className="carousel-caption d-md-block position-relative text-dark z-index-2">
+                            <div className="p-3 w-100">
                               <h3
-                                style={{
-                                  fontWeight: "700",
-                                  marginBottom: "1rem",
-                                }}
+                                className="mb-3"
+                                style={{ fontWeight: "700" }}
                               >
                                 {item.project_name}
                               </h3>
-                              <p style={{ marginBottom: "1.5rem" }}>
-                                {item.project_desc}
-                              </p>
-                              <div className="d-flex gap-3">
+                              <p className="mb-4">{item.project_desc}</p>
+                              <div className="d-flex flex-wrap gap-2">
                                 <a
                                   href={item.link}
-                                  className="btn btn-primary px-4 py-2"
+                                  className="btn btn-primary px-3 py-2"
                                   style={{
                                     borderRadius: "8px",
                                     fontWeight: "600",
+                                    minWidth: "140px",
                                   }}
                                 >
                                   View on GitHub
                                 </a>
                                 <a
-                                  href={item.demo_link || "#"}
-                                  className="btn btn-outline-primary px-4 py-2"
+                                  href="#"
+                                  className="btn btn-outline-primary px-3 py-2"
                                   style={{
                                     borderRadius: "8px",
                                     fontWeight: "600",
+                                    minWidth: "140px",
                                   }}
                                 >
                                   Live Demo
@@ -732,31 +722,31 @@ export default function Home() {
                     ))}
                   </div>
 
-                  {/* Controls */}
-                  {/* <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#projectCarousel"
-        data-bs-slide="prev"
-      >
-        <span
-          className="carousel-control-prev-icon bg-dark rounded-circle p-3"
-          aria-hidden="true"
-        ></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#projectCarousel"
-        data-bs-slide="next"
-      >
-        <span
-          className="carousel-control-next-icon bg-dark rounded-circle p-3"
-          aria-hidden="true"
-        ></span>
-        <span className="visually-hidden">Next</span>
-      </button> */}
+                  {/* Controls - Only show on desktop */}
+                  <button
+                    className="carousel-control-prev d-none d-md-flex"
+                    type="button"
+                    data-bs-target="#projectCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      className="carousel-control-prev-icon bg-dark rounded-circle p-3"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next d-none d-md-flex"
+                    type="button"
+                    data-bs-target="#projectCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      className="carousel-control-next-icon bg-dark rounded-circle p-3"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
                 </div>
               </div>
             </div>
