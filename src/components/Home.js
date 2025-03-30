@@ -4,41 +4,35 @@ import Timeline from "./Timeline";
 import Background_img from "../assets/Background_2.png";
 import "./Home.css";
 import { projects } from "./contents";
+
 export default function Home() {
   return (
-    <>
+    <div
+      style={{
+        width: "100%",
+        overflowX: "hidden",
+      }}
+    >
+      {/* Hero Section */}
       <div
-        id="container_home vh-100 w-100"
+        id="container_home"
+        className="vh-90 w-full align-items-center justify-content-center"
         style={{
-          display: "flex",
           backgroundImage: `url(${Background_img})`,
           backgroundSize: "cover",
-          height: "500px",
+          backgroundPosition: "center",
           textAlign: "center",
-          width: "100%",
+          padding: "20px 15px",
+          height: "900px",
+          maxWidth: "100%",
+          minWidth: "100%",
+          margin: 0,
         }}
       >
-        <div
-          className="container text-center"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "40px",
-            width: "100%",
-            marginLeft: "60px",
-          }}
-        >
-          <div className="row">
-            <div
-              className="col-6"
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "1.4em",
-                width: "40%",
-              }}
-            >
+        <div className="container">
+          <div className="row align-items-center">
+            {/* Photo - Hidden on small screens */}
+            <div className="col-12 col-md-6 order-md-1 order-2 text-center d-none d-md-block">
               <img
                 src={My_photo}
                 className="img-thumbnail"
@@ -48,24 +42,28 @@ export default function Home() {
                   height: "400px",
                   width: "300px",
                   objectFit: "cover",
+                  margin: "20px auto",
                 }}
               />
             </div>
-            <div className="col-6" style={{ color: "blue" }}>
+            <div className="col-12 col-md-6 order-md-2 order-1">
               <div
                 className="card"
                 style={{
-                  opacity: "100%",
-                  height: "100%",
-                  width: "100%",
-                  marginLeft: "30%",
-                  backgroundColor: "gray",
-                  opacity: "80%",
+                  backgroundColor: "rgba(128, 128, 128, 0.8)",
                   border: "none",
-                  boxShadow: "revert-layer",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                  padding: "0",
+                  marginTop: "250px",
+                  margin: "20px auto",
                 }}
               >
-                <div className="card-body">
+                <div
+                  className="card-body my-5"
+                  style={{
+                    marginTop: "200px",
+                  }}
+                >
                   <h2 className="card-title">Welcome to Vineet's Tech Hub!</h2>
                   <h6 className="card-subtitle mb-2 text-body-secondary">
                     “Explore the world of technology, one card at a time.”
@@ -81,53 +79,69 @@ export default function Home() {
                     to help fellow students and aspiring developers grow along
                     the way.
                   </p>
+                  <a href="/MyResume.pdf" download="Vineet_Sharma_Resume.pdf">
+                    <button
+                      style={{
+                        borderRadius: "12px",
+                        backgroundColor: "black",
+                        color: "white",
+                        fontFamily: "sans-serif",
+                        padding: "10px 20px",
+                        marginTop: "10px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Download Resume
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Academic Background Section */}
       <div
+        id="education"
+        className="bg-gray py-5"
         style={{
-          backgroundColor: "gray",
-          margin: "10px 10px 10px 10px",
+          margin: "10px",
           borderRadius: "40px",
-          padding: "10px",
+          padding: "20px",
           border: "5px solid black",
         }}
       >
-        <div
-          className="container my-5"
-          id="education"
-          style={{ opacity: "110%" }}
-        >
+        <div className="container">
           <h2 className="text-center mb-4">Academic Background</h2>
           <div className="row">
-            <div className="col-md-6 mb-3">
+            <div className="col-12 col-md-6 mb-3">
               <div className="card border-primary h-100">
                 <div className="card-body">
                   <h5 className="card-title">
                     Bachelor of Technology in Computer Science
                   </h5>
                   <p className="card-text">
-                    <strong>Institution:</strong> Government Engineering College
-                    , Ajmer
+                    <strong>Institution:</strong> Government Engineering
+                    College, Ajmer
                   </p>
                   <p className="card-text">
                     <strong>Year:</strong> 2022-2026
                   </p>
                   <p>
-                    <strong>Current Status</strong>:Ongoing
+                    <strong>Current Status:</strong> Ongoing
+                  </p>
+                  <p>
+                    <strong>CGPA:</strong> 8.90
                   </p>
                   <p className="card-text">
-                    <strong>Key Courses:</strong> Web Development , Data
-                    Sciences Machine Learning
+                    <strong>Key Courses:</strong> Web Development, Data Science,
+                    Machine Learning
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="col-md-6 mb-3">
+            <div className="col-12 col-md-6 mb-3">
               <div className="card border-primary h-100">
                 <div className="card-body">
                   <h5 className="card-title">Primary School</h5>
@@ -138,7 +152,7 @@ export default function Home() {
                     <strong>Year:</strong> 2020
                   </p>
                   <p className="card-text">
-                    <strong>Address:</strong> Subhash Nagar , Ajmer
+                    <strong>Address:</strong> Subhash Nagar, Ajmer
                   </p>
                   <p className="card-text">
                     <strong>Key Topics:</strong> Mathematics, Science, English
@@ -146,7 +160,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 mb-3" style={{ marginLeft: "25%" }}>
+            <div className="col-12 col-md-6 mx-auto mb-3">
               <div className="card border-primary h-100">
                 <div className="card-body">
                   <h5 className="card-title">Secondary School</h5>
@@ -157,7 +171,7 @@ export default function Home() {
                     <strong>Year:</strong> 2022
                   </p>
                   <p className="card-text">
-                    <strong>Address:</strong> Civil Road , Ajmer
+                    <strong>Address:</strong> Civil Road, Ajmer
                   </p>
                   <p className="card-text">
                     <strong>Key Topics:</strong> Mathematics, Science, English
@@ -168,356 +182,580 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* New Area of Expertise Section */}
       <div
-        className="container text-center"
-        style={{ display: "flex", height: "400px", marginTop: "70px" }}
+        id="expertise"
+        className="py-5"
+        style={{
+          margin: "10px",
+          borderRadius: "40px",
+          padding: "20px",
+          background: "linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
+        }}
       >
-        <div className="container text-center">
+        <div className="container">
           <h2
+            className="text-center mb-5"
             style={{
-              position: "absolute",
-              marginTop: "60px",
-              scale: "2",
-              opacity: "30%",
-              textShadow: "2px 3px gray",
+              fontSize: "2.5rem",
+              fontWeight: "700",
+              background: "linear-gradient(90deg, #4f46e5, #10b981)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              letterSpacing: "-0.5px",
             }}
-            className="container text-center"
           >
-            Area of Expertise
+            Areas of Expertise
           </h2>
-          <div className="row g-2">
-            <div className="col-6">
-              <div className="p-3">
-                <div className="btn-group">
-                  <button
-                    className="btn btn-secondary btn-lg dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Machine Learning
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Supervised Learning
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Unsupervised Learning
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Reinforcement Learning
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="p-3">
-                <div className="btn-group">
-                  <button
-                    className="btn btn-secondary btn-lg dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Deep Learning
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Neural Networks
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Convolutional Neural Networks
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Recurrent Neural Networks
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="p-3">
-                <div className="btn-group">
-                  <button
-                    className="btn btn-secondary btn-lg dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Full Stack Web Development
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Frontend Development
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Backend Development
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Database Management
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="p-3">
-                <div className="btn-group">
-                  <button
-                    className="btn btn-secondary btn-lg dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Competitive Programming
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Data Structures
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Algorithms
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Problem Solving
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="p-3">
-                <div className="btn-group">
-                  <button
-                    className="btn btn-secondary btn-lg dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Python
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Python Basics
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Advanced Python
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Python Libraries
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="p-3">
-                <div className="btn-group">
-                  <button
-                    className="btn btn-secondary btn-lg dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    JavaScript
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        JavaScript Basics
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Advanced JavaScript
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Frameworks
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="container-fluid" style={{ display: "flex" }}>
-        <div className="container text-center">
-          <h1>Projects</h1>
-          <div className="row my-3">
-            {Object.values(projects).map((item, key) => (
-              <div className="col my-3" key={key}>
-                <div
-                  className="card bg-dark text-light"
-                  style={{
-                    width: "18rem",
-                    height: "100%", // Ensures all cards take equal height
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <img
-                    src={item.image_link}
-                    className="card-img-top"
-                    alt="Waste Management System"
-                    style={{
-                      objectFit: "cover",
-                      height: "200px", // Ensures all images are of equal size
-                    }}
-                  />
-                  <div
-                    className="card-body"
-                    style={{
-                      flexGrow: 1, // Makes body expand and balance space
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <h5 className="card-title">{item.project_name} </h5>
-                    <div className="card-text" style={{ flexGrow: 1 }}>
-                      <h4>Description</h4>
-                      <p>{item.project_desc}</p>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      borderRadius: "15px",
-                      backgroundColor: "white",
-                      overflow: "hidden",
-                      border: "3.4px solid pink",
-                    }}
-                  >
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item">{item.specs[1]} </li>
-                      <li className="list-group-item">{item.specs[2]}</li>
-                      <li className="list-group-item">{item.specs[3]}</li>
-                    </ul>
-                  </div>
-                  <div className="card-body">
-                    <a href={item.link} className="card-link">
-                      <button
-                        style={{
-                          borderRadius: "12px",
-                          backgroundColor: "black",
-                          color: "white",
-                          fontFamily: "sans-serif",
-                        }}
-                      >
-                        GitHub{" "}
-                      </button>
-                    </a>
-                    <a href="#" className="card-link">
-                      <button
-                        style={{
-                          borderRadius: "12px",
-                          backgroundColor: "black",
-                          color: "white",
-                          fontFamily: "sans-serif",
-                        }}
-                      >
-                        Live Demo{" "}
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <h1
-        className="container text-center my-6"
-        style={{
-          position: "relative",
-          top: "110px",
-          textShadow: "2px 3px black",
-          color: "transparent",
-          scale: "2",
-          opacity: "40%",
-        }}
-      >
-        TimeLine of My work
-      </h1>
-      <div
-        className="container text-center"
-        style={{
-          height: "300px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Timeline />
-      </div>
-
-      <div
-        className="container_bottom-fluid bg-dark text-light"
-        style={{
-          height: "300px",
-          padding: "0px 0px",
-          borderRadius: "10px",
-          zIndex: "2",
-        }}
-      >
-        <div className="container ">
-          <div className="row">
-            <div
-              className="col"
-              style={{
-                marginTop: "20px",
-              }}
-            >
-              <h2
+          <div className="row g-4">
+            {/* Machine Learning */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="skill-card h-100"
                 style={{
-                  fontFamily: "initial",
+                  background: "white",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  borderLeft: "4px solid #4f46e5",
                 }}
               >
-                Contact <br /> Information{" "}
+                <div className="d-flex align-items-center mb-3">
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background:
+                        "linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <i className="fas fa-brain text-white"></i>
+                  </div>
+                  <h3 style={{ margin: 0 }}>Machine Learning</h3>
+                </div>
+                <p className="text-muted mb-3">
+                  Predictive modeling, feature engineering, and model deployment
+                </p>
+                <div className="skill-level">
+                  <div className="d-flex justify-content-between mb-1">
+                    <span>Experience Level</span>
+                    <span>Advanced</span>
+                  </div>
+                  <div
+                    className="progress-bar-container"
+                    style={{
+                      height: "8px",
+                      background: "#e9ecef",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "85%",
+                        height: "100%",
+                        background: "linear-gradient(90deg, #4f46e5, #8b5cf6)",
+                        borderRadius: "4px",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Deep Learning */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="skill-card h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  borderLeft: "4px solid #10b981",
+                }}
+              >
+                <div className="d-flex align-items-center mb-3">
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background:
+                        "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <i className="fas fa-network-wired text-white"></i>
+                  </div>
+                  <h3 style={{ margin: 0 }}>Deep Learning</h3>
+                </div>
+                <p className="text-muted mb-3">
+                  Neural networks, computer vision, and NLP applications
+                </p>
+                <div className="skill-level">
+                  <div className="d-flex justify-content-between mb-1">
+                    <span>Experience Level</span>
+                    <span>Intermediate</span>
+                  </div>
+                  <div
+                    className="progress-bar-container"
+                    style={{
+                      height: "8px",
+                      background: "#e9ecef",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "70%",
+                        height: "100%",
+                        background: "linear-gradient(90deg, #10b981, #34d399)",
+                        borderRadius: "4px",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Competitive Programming */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="skill-card h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  borderLeft: "4px solid #f59e0b",
+                }}
+              >
+                <div className="d-flex align-items-center mb-3">
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background:
+                        "linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <i className="fas fa-code text-white"></i>
+                  </div>
+                  <h3 style={{ margin: 0 }}>Competitive Programming</h3>
+                </div>
+                <p className="text-muted mb-3">
+                  Problem solving, algorithms, and data structures expertise
+                </p>
+                <div className="skill-level">
+                  <div className="d-flex justify-content-between mb-1">
+                    <span>Experience Level</span>
+                    <span>Advanced</span>
+                  </div>
+                  <div
+                    className="progress-bar-container"
+                    style={{
+                      height: "8px",
+                      background: "#e9ecef",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "80%",
+                        height: "100%",
+                        background: "linear-gradient(90deg, #f59e0b, #fcd34d)",
+                        borderRadius: "4px",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Web Development */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="skill-card h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  borderLeft: "4px solid #3b82f6",
+                }}
+              >
+                <div className="d-flex align-items-center mb-3">
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background:
+                        "linear-gradient(135deg, #3b82f6 0%, #93c5fd 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <i className="fas fa-laptop-code text-white"></i>
+                  </div>
+                  <h3 style={{ margin: 0 }}>Web Development</h3>
+                </div>
+                <p className="text-muted mb-3">
+                  Full-stack development with modern frameworks and tools
+                </p>
+                <div className="skill-level">
+                  <div className="d-flex justify-content-between mb-1">
+                    <span>Experience Level</span>
+                    <span>Proficient</span>
+                  </div>
+                  <div
+                    className="progress-bar-container"
+                    style={{
+                      height: "8px",
+                      background: "#e9ecef",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "75%",
+                        height: "100%",
+                        background: "linear-gradient(90deg, #3b82f6, #93c5fd)",
+                        borderRadius: "4px",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Data Science */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="skill-card h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  borderLeft: "4px solid #8b5cf6",
+                }}
+              >
+                <div className="d-flex align-items-center mb-3">
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background:
+                        "linear-gradient(135deg, #8b5cf6 0%, #c4b5fd 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <i className="fas fa-chart-line text-white"></i>
+                  </div>
+                  <h3 style={{ margin: 0 }}>Data Science</h3>
+                </div>
+                <p className="text-muted mb-3">
+                  Data analysis, visualization, and statistical modeling
+                </p>
+                <div className="skill-level">
+                  <div className="d-flex justify-content-between mb-1">
+                    <span>Experience Level</span>
+                    <span>Proficient</span>
+                  </div>
+                  <div
+                    className="progress-bar-container"
+                    style={{
+                      height: "8px",
+                      background: "#e9ecef",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "70%",
+                        height: "100%",
+                        background: "linear-gradient(90deg, #8b5cf6, #c4b5fd)",
+                        borderRadius: "4px",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Backend Development */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div
+                className="skill-card h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  borderLeft: "4px solid #ec4899",
+                }}
+              >
+                <div className="d-flex align-items-center mb-3">
+                  <div
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      background:
+                        "linear-gradient(135deg, #ec4899 0%, #f9a8d4 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <i className="fas fa-server text-white"></i>
+                  </div>
+                  <h3 style={{ margin: 0 }}>Backend Development</h3>
+                </div>
+                <p className="text-muted mb-3">
+                  API design, database architecture, and system optimization
+                </p>
+                <div className="skill-level">
+                  <div className="d-flex justify-content-between mb-1">
+                    <span>Experience Level</span>
+                    <span>Intermediate</span>
+                  </div>
+                  <div
+                    className="progress-bar-container"
+                    style={{
+                      height: "8px",
+                      background: "#e9ecef",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "65%",
+                        height: "100%",
+                        background: "linear-gradient(90deg, #ec4899, #f9a8d4)",
+                        borderRadius: "4px",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Projects Section */}
+      <div
+        id="projects"
+        className="container-fluid my-5 py-5"
+        style={{ background: "#f8f9fa" }}
+      >
+        <div className="container">
+          <h2
+            className="text-center mb-5"
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: "700",
+              background: "linear-gradient(90deg, #4f46e5, #10b981)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              letterSpacing: "-0.5px",
+            }}
+          >
+            Featured Projects
+          </h2>
+
+          <div
+            id="projectCarousel"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            {/* Indicators */}
+            <div className="carousel-indicators">
+              {Object.values(projects).map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  data-bs-target="#projectCarousel"
+                  data-bs-slide-to={index}
+                  className={index === 0 ? "active" : ""}
+                  aria-current={index === 0 ? "true" : "false"}
+                  aria-label={`Slide ${index + 1}`}
+                ></button>
+              ))}
+            </div>
+
+            {/* Carousel Items */}
+            <div
+              className="carousel-inner rounded-4"
+              style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
+            >
+              {Object.values(projects).map((item, index) => (
+                <div
+                  key={index}
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                >
+                  <div className="row g-0">
+                    <div className="col-md-6">
+                      <img
+                        src={item.image_link}
+                        className="d-block w-100"
+                        alt={item.project_name}
+                        style={{
+                          height: "400px",
+                          objectFit: "cover",
+                          borderTopLeftRadius: "16px",
+                          borderBottomLeftRadius: "16px",
+                        }}
+                      />
+                    </div>
+                    <div
+                      className="col-md-6 d-flex align-items-center"
+                      style={{
+                        background: "white",
+                        padding: "2rem",
+                        borderTopRightRadius: "16px",
+                        borderBottomRightRadius: "16px",
+                      }}
+                    >
+                      <div className="carousel-caption d-md-block position-static text-dark">
+                        <h3 style={{ fontWeight: "700", marginBottom: "1rem" }}>
+                          {item.project_name}
+                        </h3>
+                        <p style={{ marginBottom: "1.5rem" }}>
+                          {item.project_desc}
+                        </p>
+                        <div className="d-flex gap-3">
+                          <a
+                            href={item.link}
+                            className="btn btn-primary px-4 py-2"
+                            style={{
+                              borderRadius: "8px",
+                              fontWeight: "600",
+                            }}
+                          >
+                            View on GitHub
+                          </a>
+                          <a
+                            href="#"
+                            className="btn btn-outline-primary px-4 py-2"
+                            style={{
+                              borderRadius: "8px",
+                              fontWeight: "600",
+                            }}
+                          >
+                            Live Demo
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Controls */}
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon bg-dark rounded-circle p-3"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon bg-dark rounded-circle p-3"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Timeline Section */}
+      <div className="container text-center my-5">
+        <h1
+          style={{
+            textShadow: "2px 3px black",
+            color: "transparent",
+            opacity: "40%",
+          }}
+        >
+          TimeLine of My Work
+        </h1>
+        <div
+          style={{
+            height: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Timeline />
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div
+        id="contact"
+        className="container-fluid bg-dark text-light py-5"
+        style={{
+          borderRadius: "10px",
+        }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h2 style={{ fontFamily: "initial" }}>
+                Contact <br /> Information
               </h2>
               <p>Contact - +916378761180</p>
               <p>Email - mastergenos228@gmail.com</p>
               <p>Phone Number - +916378761180</p>
-              <p>Address - Subhash Nagar , Ajmer </p>
+              <p>Address - Subhash Nagar Ajmer , Rajashthan </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

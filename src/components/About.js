@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import Background_img from "../assets/Background_2.png";
+
 export default function About() {
   return (
     <div>
@@ -9,7 +10,11 @@ export default function About() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          position: "absolute",
+          position: "relative",
+          minHeight: "100vh",
+          padding: "20px",
+          boxSizing: "border-box",
+      
         }}
       >
         <div
@@ -18,13 +23,17 @@ export default function About() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height: "400px",
-            marginTop: "100px",
+            minHeight: "50vh",
+            padding: "20px",
             border: "3px solid yellow",
             borderRadius: "30px",
-            boxShadow: "4px 5px",
             fontFamily: "fantasy",
             textShadow: "0.1px 0.1px",
+            textWrap: "inherit",
+            maxWidth: "1200px",
+            margin: "20px auto",
+            wordBreak: "break-word",
+            marginTop:"90px"
           }}
         >
           About Me Hi, I'm Vineet Sharma, a software developer passionate about
@@ -35,7 +44,7 @@ export default function About() {
           courses like Python for Data Science. My formal education, combined
           with extensive online learning, has built a solid foundation in
           programming and data analysis. My technical stack includes Python,
-          JavaScript, ReactJS, Node.js, Django, and MongoDB. I’ve developed web
+          JavaScript, ReactJS, Node.js, Django, and MongoDB. I've developed web
           applications, automated data processing pipelines, and created machine
           learning models for data-driven projects. My recent work includes a
           Waste Management Dashboard and a Blog Application, integrating MongoDB
@@ -44,28 +53,27 @@ export default function About() {
           management using machine learning and interactive dashboards. COVID-19
           Analysis Project: Analyzed COVID-19 trends using Linear Regression and
           ARIMA models, providing insights into case progression and recovery
-          rates. Future Goals I’m currently exploring React Native and cloud
+          rates. Future Goals I'm currently exploring React Native and cloud
           technologies, with a goal to enhance my skills in mobile development
           and scalable cloud applications. I aim to contribute to impactful
           projects and eventually lead a team focused on innovative tech
           solutions. Contact Information Feel free to connect with me on
-          LinkedIn or check out my work on GitHub. I’m always open to
+          LinkedIn or check out my work on GitHub. I'm always open to
           collaborating on new ideas and projects!
         </div>
       </div>
       <footer
         className="bg-dark text-light"
         style={{
-          display: "flex",
-          top: "700px",
-          position: "absolute",
+          position: "relative",
           width: "100%",
+          padding: "20px 0"
         }}
       >
         <div
           className="container"
           style={{
-            padding: "20px 20px",
+            padding: "20px"
           }}
         >
           <div className="row">

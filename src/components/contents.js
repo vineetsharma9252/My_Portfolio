@@ -98,105 +98,112 @@ const projects = {
 };
 
 const blog_post = {
-  1: {
+  1:{
+    img:"",
+    name:"CodeWar Competition Winner - 2nd Place",
+    desc:"That was a Competition that was very suitable as well as challeging for me . being the leader of the team and only web developer was tough . Initially in first round we almost got kicked out but in the 2nd round of debugging was sensational we almost secured 1st place and at last in the final round (Development round) as a Skilled Developer i created the resatuarant website and secured the 2nd place ",
+    category:"Achievement",
+    date:"2025 March"
+  },
+  2: {
     img: shortlisted,
     name: "Shortlisted for Web Development Internship",
     desc: "Dear Vineet Sharma , We are pleased to inform you that you have been shortlisted for the Web Development Internship at Edunutshell .Your Qualifications and experiences stood out among many impressive candidates.",
     category: "Internship",
     date: "2025 Feb",
   },
-  2: {
+  3: {
     img: express,
     name: "Express Certification",
     desc: "Completed my Scaler certification in Express, Mastering the concepts of Express, Node.js, and RESTful APIs.",
     category: "Certifications",
     date: "2025 Feb",
   },
-  3: {
+  4: {
     img: "",
     name: "SIH Hackathon 2024",
     desc: "Participated in Hackathon 2024 and built a project on waste management system. That project was selected in top 10 projects.",
     category: "Hackathon",
     date: "2024 September",
   },
-  4: {
+  5: {
     img: sem_3,
     name: "Third Semester Results",
     desc: "Another step forward! My third-semester results are out, showing steady progress in my studies.",
     category: "Academics",
     date: "2024 December",
   },
-  5: {
+  6: {
     img: DBMS,
     name: "Database Management Systems",
     desc: "Studied relational databases, SQL queries, indexing, and transactions for efficient data management.",
     category: "Academics",
     date: "September 2024",
   },
-  6: {
+  7: {
     img: ML_internship,
     name: "ML Internship Certificate",
     desc: "This training taught me the real meaning of ML and Data Science. Special thanks to Diginique Techlabs institute for providing the internship.",
     category: "Machine Learning",
     date: "2023 June",
   },
-  7: {
+  8: {
     img: leetcode,
     name: "LeetCode 300+ Problems",
     desc: "Solved 300+ problems on LeetCode. The journey was tough but it was worth it.",
     category: "Coding",
     date: "2023 June",
   },
-  8: {
+  9: {
     img: sem_2,
     name: "Second Semester Results",
     desc: "Progressing further! Here are my results from the second semester.",
     category: "Academics",
     date: "2024 April",
   },
-  9: {
+  10: {
     img: ML,
     name: "Machine Learning Certification",
     desc: "Dived into the world of AI and ML! Learned regression, classification, and model evaluation techniques.",
     category: "Certifications",
     date: "2024 April",
   },
-  10: {
+  11: {
     img: java,
     name: "Programming in Java Certification",
     desc: "Completed my NPTEL certification in Java, mastering object-oriented programming and multithreading concepts.",
     category: "Certifications",
     date: "2024 April",
   },
-  11: {
+  12: {
     img: DS,
     name: "Python for Data Science",
     desc: "Gained hands-on experience with Python for data science, covering Pandas, NumPy, and visualization techniques.",
     category: "Certifications",
     date: "2023 October",
   },
-  12: {
+  13: {
     img: "",
     name: "SIH Hackathon 2023",
     desc: "Participated in SIH Hackathon 2023 and was the youngest participant in the hackathon.",
     category: "Hackathon",
     date: "2023 September",
   },
-  13: {
+  14: {
     img: sem_1,
     name: "First Semester Results",
     desc: "An important milestone! Here are my results from my first semester of engineering.",
     category: "Academics",
     date: "2023 August",
   },
-  14: {
+  15: {
     img: Edge_iot,
     name: "Completing First NPTEL Course",
     desc: "A new beginning! Successfully completed my first NPTEL course on the Foundation of Edge IoT.",
     category: "Certifications",
     date: "2023 February",
   },
-  15: {
+  16: {
     img: cyber,
     name: "Certificate of Cyber Security",
     desc: "Certificate of a cyber security course is a must. Our own college faculty taught it.",

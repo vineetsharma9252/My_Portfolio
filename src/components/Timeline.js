@@ -1,6 +1,5 @@
 import React from "react";
 import "./Timeline.css";
-// import { FaCircle } from "react-icons/fa"; // You can use icons from react-icons library
 
 const Timeline = () => {
   const events = [
@@ -18,36 +17,35 @@ const Timeline = () => {
       year: "2024-Sep",
       description: "Participated in SIH 2024 and built WasteManagement System",
     },
+    {
+      year: "2025-Jan",
+      description:
+        "Contributor of Rajasthan state Collectory projects - ADA-Project website development ",
+    },
+    {
+      year: "2025-March",
+      description: "Winner of CODEWAR - Placed 2nd ",
+    },
   ];
 
   return (
-    <div
-      className="timeline-container d-flex flex-column align-items-center"
-      style={{
-        height: "300px",
-        alignItems: "center",
-        justifyContent: "center",
-        display: "flex",
-        position: "absolute",
-        marginBottom: "100px",
-        width: "80%",
-      }}
-    >
-      <div className="timeline-line position-relative">
+    <div className="zigzag-timeline-container">
+      <div className="zigzag-timeline-line">
         {events.map((event, index) => (
           <div
             key={index}
-            className="timeline-point position-absolute"
-            style={{ left: `${(index / (events.length - 1)) * 100}%` }}
+            className={`zigzag-timeline-item ${
+              index % 2 === 0 ? "left" : "right"
+            }`}
           >
-            <div className="icon-wrapper">
-              {/* <FaCircle className="timeline-icon" /> */}
+            <div className="zigzag-timeline-content">
+              <div className="zigzag-timeline-year">{event.year}</div>
+              <div className="zigzag-timeline-description">
+                {event.description}
+                <a href="/blog"> Watch out The Blog for more</a>
+              </div>
             </div>
-            <span className="timeline-year">{event.year}</span>
-            <div className="timeline-description">
-              {event.description}{" "}
-              <a href="/blog">Watch out The Blog for more </a>
-            </div>
+            <div className="zigzag-timeline-dot"></div>
           </div>
         ))}
       </div>

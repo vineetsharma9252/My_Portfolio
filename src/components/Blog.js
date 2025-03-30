@@ -8,7 +8,7 @@ function Blog() {
         <div
           className="card_blog text-bg-dark text"
           style={{
-            height: "100px",
+            height: "70vh",
             display: "flex",
             zIndex: "-1",
             alignItems: "center",
@@ -17,12 +17,19 @@ function Blog() {
             top: "60px",
           }}
         >
-          <img src={Background_1} className="card-img" alt="..." />
+          <img
+            src={Background_1}
+            style={{
+              height: "100vh",
+            }}
+            className="card-img"
+            alt="..."
+          />
           <div
             className="card-img-overlay"
             style={{
               marginLeft: "40px",
-              marginTop: "40px",
+              marginTop: "50px",
               borderBottomRightRadius: "20px",
             }}
           >
@@ -51,6 +58,7 @@ function Blog() {
             alignItems: "center",
             justifyContent: "center",
             position: "relative",
+            marginBottom:"-200px"
           }}
         ></div>
         <div
@@ -62,9 +70,9 @@ function Blog() {
           <div className="container my-4">
             <h1
               className="text-center mb-4"
-              style={{ textDecoration: "underline" }}
+              style={{ textDecoration: "underline"}}
             >
-              Explore My Blog Post
+              Explore My Blog Posts
             </h1>
             <div className="row">
               {/* <!-- Card 1 --> */}
