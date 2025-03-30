@@ -125,7 +125,7 @@ body {
 }
 
 /* Auto-slide animation */
-@keyframes slide {
+/* @keyframes slide {
   0% { transform: translateX(0); }
   25% { transform: translateX(0); }
   33% { transform: translateX(-100%); }
@@ -137,5 +137,5 @@ body {
 
 .carousel-inner {
   animation: slide 15s infinite;
-}
+} */ 
 /* Rest of your existing CSS remains exactly the same... */

@@ -600,8 +600,8 @@ export default function Home() {
             data-bs-ride="carousel"
           >
             {/* Indicators */}
-            <div className="carousel-indicators">
-              {Object.values(projects).map((_, index) => (
+            {/* <div className="carousel-indicators">
+              {projects && Object.values(projects).map((_, index) => (
                 <button
                   key={index}
                   type="button"
@@ -612,78 +612,155 @@ export default function Home() {
                   aria-label={`Slide ${index + 1}`}
                 ></button>
               ))}
-            </div>
+            </div> */}
 
             {/* Carousel Items */}
+            {/* Projects Section */}
             <div
-              className="carousel-inner rounded-4"
-              style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
+              id="projects"
+              className="container-fluid my-5 py-5"
+              style={{ background: "#f8f9fa" }}
             >
-              {Object.values(projects).map((item, index) => (
-                <div
-                  key={index}
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+              <div className="container">
+                <h2
+                  className="text-center mb-5"
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: "700",
+                    background: "linear-gradient(90deg, #4f46e5, #10b981)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    letterSpacing: "-0.5px",
+                  }}
                 >
-                  <div className="row g-0">
-                    <div className="col-md-6">
-                      <img
-                        src={item.image_link}
-                        className="d-block w-100"
-                        alt={item.project_name}
-                        style={{
-                          height: "400px",
-                          objectFit: "cover",
-                          borderTopLeftRadius: "16px",
-                          borderBottomLeftRadius: "16px",
-                        }}
-                      />
-                    </div>
-                    <div
-                      className="col-md-6 d-flex align-items-center"
-                      style={{
-                        background: "white",
-                        padding: "2rem",
-                        borderTopRightRadius: "16px",
-                        borderBottomRightRadius: "16px",
-                      }}
-                    >
-                      <div className="carousel-caption d-md-block position-static text-dark">
-                        <h3 style={{ fontWeight: "700", marginBottom: "1rem" }}>
-                          {item.project_name}
-                        </h3>
-                        <p style={{ marginBottom: "1.5rem" }}>
-                          {item.project_desc}
-                        </p>
-                        <div className="d-flex gap-3">
-                          <a
-                            href={item.link}
-                            className="btn btn-primary px-4 py-2"
+                  Featured Projects
+                </h2>
+
+                <div
+                  id="projectCarousel"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  {/* Indicators */}
+                  <div className="carousel-indicators">
+                    {Object.values(projects).map((_, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        data-bs-target="#projectCarousel"
+                        data-bs-slide-to={index}
+                        className={index === 0 ? "active" : ""}
+                        aria-current={index === 0 ? "true" : "false"}
+                        aria-label={`Slide ${index + 1}`}
+                      ></button>
+                    ))}
+                  </div>
+
+                  {/* Carousel Items */}
+                  <div
+                    className="carousel-inner rounded-4"
+                    style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
+                  >
+                    {Object.values(projects).map((item, index) => (
+                      <div
+                        key={index}
+                        className={`carousel-item ${
+                          index === 0 ? "active" : ""
+                        }`}
+                      >
+                        <div className="row g-0">
+                          <div className="col-md-6">
+                            <img
+                              src={item.image_link}
+                              className="d-block w-100"
+                              alt={item.project_name}
+                              style={{
+                                height: "400px",
+                                objectFit: "cover",
+                                borderTopLeftRadius: "16px",
+                                borderBottomLeftRadius: "16px",
+                              }}
+                            />
+                          </div>
+                          <div
+                            className="col-md-6 d-flex align-items-center"
                             style={{
-                              borderRadius: "8px",
-                              fontWeight: "600",
+                              background: "white",
+                              padding: "2rem",
+                              borderTopRightRadius: "16px",
+                              borderBottomRightRadius: "16px",
                             }}
                           >
-                            View on GitHub
-                          </a>
-                          <a
-                            href="#"
-                            className="btn btn-outline-primary px-4 py-2"
-                            style={{
-                              borderRadius: "8px",
-                              fontWeight: "600",
-                            }}
-                          >
-                            Live Demo
-                          </a>
+                            <div className="carousel-caption d-md-block position-relative text-dark z-index-2">
+                              <h3
+                                style={{
+                                  fontWeight: "700",
+                                  marginBottom: "1rem",
+                                }}
+                              >
+                                {item.project_name}
+                              </h3>
+                              <p style={{ marginBottom: "1.5rem" }}>
+                                {item.project_desc}
+                              </p>
+                              <div className="d-flex gap-3">
+                                <a
+                                  href={item.link}
+                                  className="btn btn-primary px-4 py-2"
+                                  style={{
+                                    borderRadius: "8px",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  View on GitHub
+                                </a>
+                                <a
+                                  href={item.demo_link || "#"}
+                                  className="btn btn-outline-primary px-4 py-2"
+                                  style={{
+                                    borderRadius: "8px",
+                                    fontWeight: "600",
+                                  }}
+                                >
+                                  Live Demo
+                                </a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
+
+                  {/* Controls */}
+                  {/* <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#projectCarousel"
+        data-bs-slide="prev"
+      >
+        <span
+          className="carousel-control-prev-icon bg-dark rounded-circle p-3"
+          aria-hidden="true"
+        ></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#projectCarousel"
+        data-bs-slide="next"
+      >
+        <span
+          className="carousel-control-next-icon bg-dark rounded-circle p-3"
+          aria-hidden="true"
+        ></span>
+        <span className="visually-hidden">Next</span>
+      </button> */}
                 </div>
-              ))}
+              </div>
             </div>
 
-            {/* Controls */}
             <button
               className="carousel-control-prev"
               type="button"

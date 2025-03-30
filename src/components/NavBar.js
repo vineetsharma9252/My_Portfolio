@@ -14,9 +14,9 @@ export default function NavBar() {
       style={{
         width: "100%",
         position: "fixed",
-        zIndex: "1",
+        zIndex: "3",
         borderRadius: "10px",
-        height: "70px"
+        height: "70px",
       }}
     >
       <div className="container-fluid">
@@ -29,7 +29,7 @@ export default function NavBar() {
         </a>
 
         {/* Mobile menu button - only visible on mobile */}
-        <button 
+        <button
           className="mobile-menu-button"
           onClick={() => setIsOpen(!isOpen)}
           style={{
@@ -39,19 +39,19 @@ export default function NavBar() {
             fontSize: "24px",
             cursor: "pointer",
             padding: "5px 10px",
-            marginRight: "10px"
+            marginRight: "10px",
           }}
         >
           {isOpen ? "✕" : "☰"}
         </button>
 
         {/* Navigation container */}
-        <div 
+        <div
           className={`nav-container ${isOpen ? "mobile-open" : ""}`}
           style={{
             display: "flex",
             flexGrow: 1,
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           {/* Left navigation links */}
@@ -62,10 +62,18 @@ export default function NavBar() {
             <a className="nav-a" href="/Blog" style={{ marginLeft: "40px" }}>
               Blog
             </a>
-            <a className="nav-a" href="/about-me" style={{ marginLeft: "40px" }}>
+            <a
+              className="nav-a"
+              href="/about-me"
+              style={{ marginLeft: "40px" }}
+            >
               AboutMe
             </a>
-            <a className="nav-a" href="/testimonials" style={{ marginLeft: "40px" }}>
+            <a
+              className="nav-a"
+              href="/testimonials"
+              style={{ marginLeft: "40px" }}
+            >
               Testimonial
             </a>
           </div>
