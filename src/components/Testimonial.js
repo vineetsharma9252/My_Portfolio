@@ -95,11 +95,6 @@ export default function Testimonial() {
                     Contact
                   </a>
                 </li>
-                <li>
-                  <a href="/privacy-policy" class="text-light">
-                    Privacy Policy
-                  </a>
-                </li>
               </ul>
             </div>
             {/* <!-- Social Media Links --> */}
@@ -114,8 +109,8 @@ export default function Testimonial() {
               >
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
-              <a href="https://twitter.com/your-profile" class="text-light">
-                <i class="fab fa-twitter"></i> Twitter
+              <a href="https://leetcode.com/u/vineet634/" class="text-light">
+                <i class="fab fa-twitter"></i> Leetcode
               </a>
             </div>
           </div>
