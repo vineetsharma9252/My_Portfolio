@@ -723,7 +723,7 @@ export default function Home() {
                   </div>
 
                   {/* Controls - Only show on desktop */}
-                  <button
+                  {/* <button
                     className="carousel-control-prev d-none d-md-flex"
                     type="button"
                     data-bs-target="#projectCarousel"
@@ -746,7 +746,7 @@ export default function Home() {
                       aria-hidden="true"
                     ></span>
                     <span className="visually-hidden">Next</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
